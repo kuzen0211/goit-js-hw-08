@@ -31,16 +31,9 @@ function insertData() {
   const parseSaveData = JSON.parse(saveData);
 
   if (saveData) {
-    if (parseSaveData.email) {
-      refs.input.value = parseSaveData.email;
-    } else {
-      refs.input.value = '';
-    }
-    if (parseSaveData.message) {
-      refs.textarea.value = parseSaveData.message;
-    } else {
-      refs.textarea.value = '';
-    }
+    refs.input.value = parseSaveData.email ?? '';
+    refs.textarea.value = parseSaveData.message ?? '';
+
     formData.email = parseSaveData.email;
     formData.message = parseSaveData.message;
   }
