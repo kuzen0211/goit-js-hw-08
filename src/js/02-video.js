@@ -8,11 +8,6 @@ const STORAGE_TIME = 'videoplayer-current-time';
 updateMainCurrentTime();
 
 const onPlay = function (currentTime) {
-  {
-    duration: 61.857;
-    percent: 0.049;
-    seconds: 3.034;
-  }
   const currTime = currentTime.seconds;
   console.log(currTime);
   localStorage.setItem(STORAGE_TIME, currTime);
